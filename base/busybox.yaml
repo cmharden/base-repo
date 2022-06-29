@@ -1,11 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: busybox
   name: busybox
-  namespace: default
+  namespace: busybox
 spec:
   replicas: 1
   selector:
@@ -14,12 +13,10 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: busybox
     spec:
       containers:
       - image: busybox
         name: busybox
-        resources: {}
-status: {}
+
